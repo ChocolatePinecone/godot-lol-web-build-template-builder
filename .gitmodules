@@ -1,0 +1,8 @@
+[submodule "emsdk"]
+	path = emsdk
+	url = https://github.com/emscripten-core/emsdk.git
+	tag = 4.0.12
+[submodule "godot"]
+	path = godot
+	url = https://github.com/godotengine/godot.git
+	tag = 4.4.1-stable
