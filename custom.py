@@ -1,4 +1,3 @@
-target="template_release"
 debug_symbols="no"
 optimize="size"
 lto="full"

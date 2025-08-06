@@ -1,6 +1,8 @@
 # Legends of Learning - Godot web build template builder
-This is a little project meant to simplify building a web build template for Godot.
+This is a little project meant to simplify building a web build template for Godot, with games for Legends of Learning in mind.
 It is meant to create a build template used to create a very small functional web build of Godot games, while still using the latest Godot version.
+
+Currently, a practically empty Godot project (1 scene with a RichTextLabel) results in a build of 24.1MB.
 
 ## Prerequisites
 The following tools are required for compiling the web build template:
@@ -23,7 +25,7 @@ Install the requirements with pip
 pip install -r requirements
 ```
 
-## Usage
+## Compiling the web build template
 To compile the godot web build, first make sure you have activated your python virtual environment:
 ```commandline
 .\venv\bin\activate
@@ -31,5 +33,26 @@ To compile the godot web build, first make sure you have activated your python v
 
 Then compile the godot web build template with the bat file on windows:
 ```commandline
-.\make_web_build_template.bat
+python make_web_build_template.py
 ```
+
+You'll find the template in the godot/bin directory
+
+## Compiling the Godot editor
+To use the web build template succesfully, its version must fully match the Godot editor version. 
+It's possible to build the exact Godot editor version you need by running the following command:
+```commandline
+python make_editor.py
+```
+
+You'll find the editor application in the godot/bin directory
+
+## Using the web build template
+To configure your web export to point to the web build template, first enable the advanced options:
+![export-advanced-options-location.png](images/export-advanced-options-location.png)
+
+Then configure the web build template as template for your export:
+![export-template-config-location.png](images/export-template-config-location.png)
+
+Now simply export your game build, and it should result in a much smaller build.
+Do keep in mind, you'll still need to optimize your game assets to fit within the limits of LoL.
