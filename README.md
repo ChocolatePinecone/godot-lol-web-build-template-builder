@@ -4,6 +4,8 @@ It is meant to create a build template used to create a very small functional we
 
 Currently, a practically empty Godot project (1 scene with a RichTextLabel) results in a build of 24.1MB.
 
+Much thanks to [this guide](https://popcar.bearblog.dev/how-to-minify-godots-build-size/) and the Godot docs about [compiling for the web](https://docs.godotengine.org/en/stable/contributing/development/compiling/compiling_for_web.html) and [optimizing a build for size](https://docs.godotengine.org/en/stable/contributing/development/compiling/optimizing_for_size.html)
+
 ## Prerequisites
 The following tools are required for compiling the web build template:
 - Python (preferably 3.12 or higher)
