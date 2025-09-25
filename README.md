@@ -2,7 +2,7 @@
 This is a little project meant to simplify building a web build template for Godot, with games for Legends of Learning in mind.
 It is meant to create a build template used to create a very small functional web build of Godot games, while still using the latest Godot version.
 
-Currently, a practically empty Godot project (1 scene with a RichTextLabel) results in a build of 24.1MB.
+Currently, a practically empty Godot 4.4 project (1 scene with a RichTextLabel) results in a build of 24.1MB.
 
 Much thanks to [this guide](https://popcar.bearblog.dev/how-to-minify-godots-build-size/) and the Godot docs about [compiling for the web](https://docs.godotengine.org/en/stable/contributing/development/compiling/compiling_for_web.html) and [optimizing a build for size](https://docs.godotengine.org/en/stable/contributing/development/compiling/optimizing_for_size.html)
 
@@ -33,7 +33,7 @@ To compile the godot web build, first make sure you have activated your python v
 .\venv\bin\activate
 ```
 
-Then compile the godot web build template with the bat file on windows:
+Then compile the godot web build template with the following python command:
 ```commandline
 python make_web_build_template.py
 ```
@@ -41,7 +41,7 @@ python make_web_build_template.py
 You'll find the template in the godot/bin directory
 
 ## Compiling the Godot editor
-To use the web build template succesfully, its version must fully match the Godot editor version. 
+To use the web build template successfully, its version must fully match the Godot editor version. 
 It's possible to build the exact Godot editor version you need by running the following command:
 ```commandline
 python make_editor.py
@@ -58,3 +58,11 @@ Then configure the web build template as template for your export:
 
 Now simply export your game build, and it should result in a much smaller build.
 Do keep in mind, you'll still need to optimize your game assets to fit within the limits of LoL.
+
+## Testing a build
+To check if your game build works correctly, you can run your game build locally by doing the following:
+- Place all build files into the build-tester/build directory
+- Run the test-build.bat file
+
+This will serve your game files to a local url, and open it in the browser. 
+Here you will be able to play your game in the browser to check if everything works correctly.
